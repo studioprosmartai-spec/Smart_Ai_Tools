@@ -1,18 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart AI Tools</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart AI Tools</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+background:#111827;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+color:#00e5ff;
+box-shadow:0 2px 10px rgba(0,0,0,.4);
+}
+
+.hero{
+padding:40px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.search{
+width:90%;
+max-width:500px;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:18px;
+outline:none;
+}
+
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+transition:.3s;
+cursor:pointer;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-5px);
+background:#334155;
+}
+
+.card h2{
+margin-bottom:10px;
+color:#00e5ff;
+}
+
+.card p{
+color:#ddd;
+font-size:15px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#111827;
+margin-top:30px;
+color:#aaa;
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+background:#00e5ff;
+font-size:16px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#00bcd4;
+}
+
+</style>
+
 </head>
-<body style="font-family:Arial; text-align:center; padding:50px; background:#111; color:white;">
 
-  <h1>🤖 Smart AI Tools</h1>
-  <p>Welcome to Smart AI Tools</p>
+<body>
 
-  <button style="padding:10px 20px; font-size:18px;">
-    Explore Tools
-  </button>
+<header>
+🤖 Smart AI Tools
+</header>
 
-</body>
-</html>
+<section class="hero">
+
+<h1>All AI Tools In One Place</h1>
+
+<p>
+Free AI tools for students, creators and everyone.
+</p>
+
+<input
+type="text"
+class="search"
+id="search"
+placeholder="Search AI Tool..."
+onkeyup="searchTools()">
+
+</section>
+
+<div class="tools" id="toolList">
